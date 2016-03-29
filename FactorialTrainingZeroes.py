@@ -10,7 +10,7 @@ class Solution:
         result = 0
         x = 5
         while n >= x:
-            #向下取整
+            #向下取整floor result = floor(5) + floor(25) + floor(125)....
             result += int(n / x)
             x *= 5
         return result 
