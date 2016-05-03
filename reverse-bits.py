@@ -21,4 +21,4 @@ class Solution(object):
         return result
 
 if __name__ == "__main__":
-    print(Solution().reverseBits(8))
+    print(Solution().reverseBits(43261596))
