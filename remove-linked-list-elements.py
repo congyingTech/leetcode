@@ -2,6 +2,7 @@
 # Definition for singly-linked list.
 
 #未完成！！！
+#不知道为啥就是通过不了==
 
 class ListNode(object):
     def __init__(self, x):
@@ -21,7 +22,7 @@ class Solution(object):
         p = head
         while p.next:
             if p.val == val:
-                head = head.next
+                p = p.next
             if p.next.val == val and p.next.next:
                 #p.next是要删除的结点，删除p.next
                 p.next = p.next.next
@@ -33,15 +34,13 @@ class Solution(object):
             else:
                 p = p.next
         return head
-
 if __name__ == "__main__":
     head = ListNode(1)
-    head.next, head.next.next, head.next.next.next,head.next.next.next.next = ListNode(1),ListNode(3),ListNode(1),ListNode(5)
-    Solution().removeElements(head, 1)
+    head.next, head.next.next, head.next.next.next,head.next.next.next.next = ListNode(1),ListNode(2),ListNode(1),ListNode(5)
+    Solution().removeElements(head, 2)
     while head:
         print(head.val)
         head = head.next
-    
     
     
     
