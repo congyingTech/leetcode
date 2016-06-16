@@ -3,8 +3,8 @@
 #又是超时的一个杰作 呵呵呵呵呵
 class Solution(object):
     def topKFrequent(self, nums, k):
-        sortednums = sorted(nums)
-        nosamenums = set(sortednums)
+        #sortednums = sorted(nums)
+        nosamenums = set(nums)
         #countdict = dict() 这样使用会有UnboundLocalError: local variable 'dict' referenced before assignment
         countdict = {}
         res = []
@@ -16,7 +16,7 @@ class Solution(object):
 #           print(k)
         #test : print(countdict)
         for key in countdict:
-            for i in sortednums:
+            for i in nums:
                 if i == key:
                     countdict[key] += 1
         countlist = sorted(countdict.items(), key=lambda d:d[1], reverse = True)
